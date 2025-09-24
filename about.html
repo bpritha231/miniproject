@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <style>
+    html { scroll-behavior: smooth; }
+    body { margin:0; font-family: Poppins, sans-serif; }
+    /* Navbar */
+    .navbar {
+      position: fixed;
+      top:0; left:0;
+      width:100%;
+      background: wheat;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:15px 50px;
+      z-index:1000;
+      transition: background 0.3s;
+    }
+    .navbar.scrolled {
+      background: #ccc; /* ash color on scroll */
+    }
+    .navbar a {
+      text-decoration:none;
+      margin-left:20px;
+      color:black;
+      font-weight:600;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <div class="navbar" id="navbar">
+    <div style="font-size:22px;font-weight:700;">MyLogo</div>
+    <div style="margin-right: 90px;">
+      <a href="home.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="#cart" style="background:black;color:white;padding:6px 12px;border-radius:5px;">Cart</a>
+    <a href="#cart" style="background:rgb(25, 221, 7);color:rgb(255, 255, 255);padding:6px 12px;border-radius:5px;">buy now</a>
+    </div>
+  </div>
+  </body>
+  </html<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    html { scroll-behavior: smooth; }
+    body { margin:0; font-family: Poppins, sans-serif; background:#f8f8f8; }
+
+    /* Navbar */
+    .navbar {
+      position: fixed;
+      top:0; left:0;
+      width:100%;
+      background: wheat;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:15px 50px;
+      z-index:1000;
+      transition: background 0.3s;
+    }
+    .navbar.scrolled {
+      background: #ccc;
+    }
+    .navbar a {
+      text-decoration:none;
+      margin-left:20px;
+      color:black;
+      font-weight:600;
+    }
+
+    /* About Page */
+    .about-hero {
+      background: url('./images/about-hero.jpg') center/cover no-repeat;
+      height: 400px;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      color:white;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.5);
+      font-size: 2.5rem;
+      font-weight:700;
+      margin-top: 60px; /* to avoid navbar */
+    }
+
+    .section {
+      max-width: 1200px;
+      margin: 50px auto;
+      padding: 0 20px;
+    }
+
+    .section h2 {
+      text-align:center;
+      color:#333;
+      margin-bottom: 30px;
+      font-size:2rem;
+    }
+
+    .section p {
+      text-align:center;
+      color:#555;
+      font-size:1.1rem;
+      line-height:1.8;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    /* Mission & Vision */
+    .mv-container {
+      display:flex;
+      justify-content: space-between;
+      gap: 30px;
+      flex-wrap: wrap;
+      margin-top:50px;
+    }
+
+    .mv-box {
+      flex:1;
+      min-width:280px;
+      background:#fff;
+      padding:30px;
+      border-radius:12px;
+      box-shadow:0 4px 20px rgba(0,0,0,0.1);
+      text-align:center;
+    }
+
+    .mv-box h3 {
+      margin-bottom:15px;
+      color:#0b76ff;
+    }
+
+    /* Team Section */
+    .team-container {
+      display:flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+      margin-top:50px;
+    }
+
+    .team-member {
+      background:#fff;
+      border-radius:12px;
+      box-shadow:0 4px 20px rgba(0,0,0,0.1);
+      width:250px;
+      text-align:center;
+      padding:20px;
+    }
+
+    .team-member img {
+      width:120px;
+      height:120px;
+      border-radius:50%;
+      object-fit:cover;
+      margin-bottom:15px;
+    }
+
+    .team-member h4 {
+      margin:5px 0;
+      color:#333;
+    }
+
+    .team-member p {
+      color:#555;
+      font-size:0.9rem;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <div class="navbar" id="navbar">
+    <div style="font-size:22px;font-weight:700;">MyLogo</div>
+    <div style="margin-right: 90px;">
+      <a href="home.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="#cart" style="background:black;color:white;padding:6px 12px;border-radius:5px;">Cart</a>
+      <a href="#cart" style="background:rgb(25, 221, 7);color:white;padding:6px 12px;border-radius:5px;">Buy Now</a>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <div class="about-hero">
+    About Us
+  </div>
+
+  <!-- Company Story -->
+  <section class="section">
+    <h2>Our Story</h2>
+    <p>At Artisan Home, we create beautiful, sustainable furniture that brings families together. 
+    Each piece is thoughtfully designed and expertly crafted to last generations. 
+    Our journey started with a passion for quality and a commitment to ethical production.</p>
+  </section>
+
+  <!-- Mission & Vision -->
+  <section class="section">
+    <div class="mv-container">
+      <div class="mv-box">
+        <h3>Our Mission</h3>
+        <p>To craft exquisite furniture that combines style, comfort, and sustainability, enhancing every home.</p>
+      </div>
+      <div class="mv-box">
+        <h3>Our Vision</h3>
+        <p>To be the most trusted furniture brand, known for quality, innovation, and eco-conscious craftsmanship.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team -->
+  <section class="section">
+    <h2>Meet Our Team</h2>
+    <div class="team-container">
+      <div class="team-member">
+        <img src="./images/team1.jpg" alt="Team Member">
+        <h4>Jane Doe</h4>
+        <p>Founder & CEO</p>
+      </div>
+      <div class="team-member">
+        <img src="./images/team2.jpg" alt="Team Member">
+        <h4>John Smith</h4>
+        <p>Lead Designer</p>
+      </div>
+      <div class="team-member">
+        <img src="./images/team3.jpg" alt="Team Member">
+        <h4>Mary Johnson</h4>
+        <p>Head of Production</p>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>

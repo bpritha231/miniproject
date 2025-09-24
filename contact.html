@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: Poppins, sans-serif;
+      background: #f8f8f8;
+    }
+
+    /* Navbar (reuse your navbar styles) */
+    .navbar {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      background: wheat;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 50px;
+      z-index: 1000;
+      transition: background 0.3s;
+    }
+    .navbar.scrolled {
+      background: #ccc;
+    }
+    .navbar a {
+      text-decoration: none;
+      margin-left: 20px;
+      color: black;
+      font-weight: 600;
+    }
+
+    /* Contact Page Styles */
+    .contact-section {
+      max-width: 1200px;
+      margin: 120px auto 50px auto; /* margin top to avoid navbar */
+      display: flex;
+      gap: 50px;
+      padding: 20px;
+      flex-wrap: wrap;
+    }
+
+    .contact-info, .contact-form {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      padding: 40px;
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .contact-info h2, .contact-form h2 {
+      margin-top: 0;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .contact-info p {
+      margin: 10px 0;
+      color: #555;
+      line-height: 1.6;
+    }
+
+    .contact-info .icon {
+      margin-right: 10px;
+      color: #0b76ff;
+    }
+
+    .contact-form input, 
+    .contact-form textarea {
+      width: 100%;
+      padding: 12px 15px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+      resize: none;
+    }
+
+    .contact-form button {
+      padding: 12px 25px;
+      border: none;
+      border-radius: 8px;
+      background: #0b76ff;
+      color: white;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .contact-form button:hover {
+      background: #095ec3;
+    }
+
+    /* Responsive */
+    @media(max-width: 900px) {
+      .contact-section {
+        flex-direction: column;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <div class="navbar" id="navbar">
+    <div style="font-size:22px;font-weight:700;">MyLogo</div>
+    <div style="margin-right: 90px;">
+      <a href="home.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="#cart" style="background:black;color:white;padding:6px 12px;border-radius:5px;">Cart</a>
+      <a href="#cart" style="background:rgb(25, 221, 7);color:white;padding:6px 12px;border-radius:5px;">Buy Now</a>
+    </div>
+  </div>
+
+  <!-- Contact Section -->
+  <section class="contact-section">
+    <!-- Contact Info -->
+    <div class="contact-info">
+      <h2>Contact Information</h2>
+      <p><span class="icon">📍</span>123 Craftsman Avenue, thanjavur,</p>
+      <p><span class="icon">📞</span>+91 9876543210</p>
+      <p><span class="icon">✉️</span>hello@artisanhome.com</p>
+    </div>
+
+    <!-- Contact Form -->
+    <div class="contact-form">
+      <h2>Get in Touch</h2>
+      <form onsubmit="submitForm(event)">
+        <input type="text" id="name" placeholder="Your Name" required>
+        <input type="email" id="email" placeholder="Your Email" required>
+        <input type="text" id="subject" placeholder="Subject" required>
+        <textarea id="message" rows="6" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <script>
+    function submitForm(event) {
+      event.preventDefault();
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const subject = document.getElementById('subject').value;
+      const message = document.getElementById('message').value;
+
+      alert(`Thank you, ${name}! Your message has been sent.\n\nSubject: ${subject}\nMessage: ${message}`);
+      
+      // Reset form
+      event.target.reset();
+    }
+  </script>
+
+</body>
+</html>

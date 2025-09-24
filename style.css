@@ -1,0 +1,109 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.navbar {
+      position: fixed; top:0; left:0; width:100%;
+      background: wheat;
+      display:flex; justify-content:space-between; align-items:center;
+      padding:15px 50px; z-index:1000;
+    }
+    .navbar a { margin-left:20px; text-decoration:none; color:black; font-weight:600; }
+    .product-card {
+      position: relative;
+      width: 500px;
+      margin-top: 30px;
+    }
+    .wishlist-icon {
+      position: absolute;
+      top: 15px; right: 15px;
+      font-size: 28px;
+      color: white;
+      background: rgba(0,0,0,0.5);
+      border-radius: 50%;
+      padding: 8px;
+      cursor: pointer;
+    }
+    .wishlist-icon.active {
+      color: red;
+      background: white;
+    }
+    .product-details {
+      margin-top: 15px;
+      font-size: 16px;
+    }
+    .product-details h3 {
+      margin: 8px 0 5px;
+      font-size: 22px;
+    }
+    .product-details p {
+      margin: 5px 0;
+      color: #555;
+    }
+    .price {
+      font-size: 20px;
+      font-weight: 700;
+      margin: 8px 0;
+    }
+    .buy-btn {
+      display:inline-block;
+      background:black;
+      color:white;
+      padding:10px 20px;
+      border-radius:6px;
+      text-decoration:none;
+      font-weight:600;
+    }
+    .products-container {
+  display: flex;          /* makes children horizontal */
+  gap: 20px;              /* space between cards */
+  justify-content: center; /* center horizontally */
+  flex-wrap: wrap;        /* wrap on small screens */
+}
+
+.product-card {
+  background: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  width: 350px;           /* same width as your images */
+  position: relative;
+}
+
+.wishlist-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  cursor: pointer;
+}
+.client-cards {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+  
+}
+
+.client-card {
+  background: rgb(172, 162, 162);
+  padding: 30px;
+  border-radius: 12px;
+  width: 300px;
+  text-align: left;
+}
+
+.client-card p {
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+.client-card h4 {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.client-card span {
+  font-size: 14px;
+  opacity: 0.8;
+}
